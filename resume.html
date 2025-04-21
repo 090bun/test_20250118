@@ -8,8 +8,13 @@
     <!-- 後面有設更新時間 如果藥用要改! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- /*rel 樣式設定 */ -->
+    <link rel="stylesheet" href="reset.css" />
+    <!-- <link rel="stylesheet" href="resume.css" /> -->
     <style>
-        * { /* 全部的元素都會有這個樣式 */
+        * {
+            /* 全部的元素都會有這個樣式 */
             font-family: 'Courier New', Courier, monospace;
             font-size: 16px;
             line-height: 1.5;
@@ -18,13 +23,19 @@
 
         .highlight {
             /* color: var(--primary-color); */
-            outline: 3px solid gold;
+            outline: 3px solid rgb(243, 105, 25);
             background-color: yellow;
         }
 
         #DDD {
             color: #33FF13;
         }
+
+        section li {
+            color: #061a06;
+
+        }
+
     </style>
 
     <script>
@@ -50,17 +61,13 @@
 </head>
 
 <body>
-    <!-- <h1>css 選擇器</h1>
-<p>請輸入CSS選擇器</p>
-<input type="text" id="selector"/>
-<button type="button">傳送</button> -->
-
-    <h1>CSS 選擇器 Highlighter</h1>
+    <!-- <h1>CSS 選擇器 Highlighter</h1>
     <p>請輸入 CSS 選擇器：</p>
     <input type="text" id="selector" />
     <button type="button" onclick="doHighlight()">送出</button>
+    <hr /> -->
 
-    <hr />
+
     <H1>履歷表</H1>
     <section>
         <h2 class="text_primary">張宜文 bun</h2>
@@ -71,6 +78,8 @@
         <h3>關於我</h3>
         <p>
             我是張宜文,bun
+        </p>
+        <p>
             在之前工作時曾接觸 Maya、3ds Max，目前正在學習Blender、Unity，嘗試製作遊戲。
             對遊戲系統的邏輯與資料處理產生濃厚興趣，進而萌生轉往遊戲後端發展的想法。
             希望能結合創意與技術，打造穩定且富有深度的遊戲體驗。
