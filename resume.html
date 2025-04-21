@@ -8,14 +8,63 @@
     <!-- 後面有設更新時間 如果藥用要改! -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { /* 全部的元素都會有這個樣式 */
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #33AAA3;
+        }
+
+        .highlight {
+            /* color: var(--primary-color); */
+            outline: 3px solid gold;
+            background-color: yellow;
+        }
+
+        #DDD {
+            color: #33FF13;
+        }
+    </style>
+
+    <script>
+        function doHighlight() {
+            // 清除所有樣式
+            const allElements = document.querySelectorAll(".highlight");
+            console.log('allElements 有幾個？', allElements.length);
+            allElements.forEach((element) => {
+                element.classList.remove("highlight");
+            });
+
+            // 取得使用者輸入的 CSS 選擇器
+            const selector = document.getElementById("selector").value;
+            console.log('selector 是什麼值？', selector);
+            const elements = document.querySelectorAll(selector);
+            elements.forEach((element) => {
+                element.classList.add("highlight");
+            });
+        }
+    </script>
+
     <title>bun resume</title>
 </head>
 
 <body>
+    <!-- <h1>css 選擇器</h1>
+<p>請輸入CSS選擇器</p>
+<input type="text" id="selector"/>
+<button type="button">傳送</button> -->
+
+    <h1>CSS 選擇器 Highlighter</h1>
+    <p>請輸入 CSS 選擇器：</p>
+    <input type="text" id="selector" />
+    <button type="button" onclick="doHighlight()">送出</button>
+
+    <hr />
     <H1>履歷表</H1>
     <section>
-        <h2>張宜文 bun</h2>
-        <ul>3D動畫、Rigger</ul>
+        <h2 class="text_primary">張宜文 bun</h2>
+        <ul id="DDD">3D動畫、Rigger</ul>
         <ul>kasanomio@gmai.com</ul>
     </section>
     <article>
@@ -34,12 +83,13 @@
 
     <section>
         <h2>animation Reel</h2>
-        <p>
-            hand key Reel
-        <ul>https://vimeo.com/785376926</ul>
-        mocap Reel
-        <ul>https:vimeo.com/manage/videos/785377822</ul>
-        </p>
+        <dl>
+            <dt>hand key Reel</dt>
+            <dd>https://vimeo.com/785376926</dd>
+            <dt> mocap Reel</dt>
+            <dd>https://vimeo.com/user107162001</dd>
+        </dl>
+
     </section>
 
     <section>
@@ -48,20 +98,25 @@
         <ul>3d max</ul>
         <ul>blender</ul>
         <ul>unity</ul>
-        
+
     </section>
     <section>
         <h2>工作經驗</h2>
-        <p>國軍自願役 1
-            賽提克動畫 2
-            攝影助理 3
-            kiroro渡假飯店 0.5</p>
-    </section>
-    <footer>
-        <address>桃園你家</address><!-- 地址裡面會自動跳成斜體 -->
-        <br />
-        更新日期:DAY/Month/Year
-    </footer>
+        <ol>
+            <li>國軍自願役 1</li>
+            <li>賽提克動畫 2</li>
+            <li>攝影助理 3</li>
+            <li>kiroro渡假飯店 0.5</li>
+        </ol>
+
+
+
+
+        <footer>
+            <address>桃園你家</address><!-- 地址裡面會自動跳成斜體 -->
+            <br />
+            更新日期:DAY/Month/Year
+        </footer>
 </body>
 
 </html>
