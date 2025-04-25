@@ -1,0 +1,81 @@
+.movie__list {
+    display: flex;
+    gap: 16px;
+    border: 8px solid black;
+   }
+
+.movie__item {
+    display: flex;
+    height: 300px;
+    width: 50%;
+    background-size: cover;
+    transition: background-size 5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.movie__item> h2 {
+    height: 25px;
+    padding: 8px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+    display: flex;
+     justify-content: center;
+    
+}
+
+.movie__item.cover {
+    background-position: center;
+    color: white;
+    display: flex;
+    }
+
+.movie__item:hover {
+    background-size: 150%;
+}
+
+.movie__list:nth-child(2) {
+    display:flex;
+    flex-direction:row-reverse;
+}
+
+
+
+.item1 {
+    
+    background-image: url(https://www.vscinemas.com.tw/upload/film/film_20250305008.jpg);
+}
+
+.item3 {
+    background-image: url(https://www.vscinemas.com.tw/upload/film/film_20250402032.jpg);
+}
+
+
+
+/* @media (max-width: 1024px) {
+    main#desktop {
+        display: none;
+    }
+} */
+
+/* @media (min-width: 1025px) {
+    main#mobile {
+        display: none;
+    }
+    
+    main#desktop {
+        display: block;
+    }
+
+    .movie__item {
+        width: 45%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+
+} */
